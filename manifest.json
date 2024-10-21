@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "host_permissions": ["<all_urls>"],
+    "name": "Canvas, Stay Alive!",
+    "version": "1.0",
+    "description": "Stops canvas.com from the user being Timed Out",
+    "permissions": [
+      "tabs",
+      "alarms"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
