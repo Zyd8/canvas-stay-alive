@@ -11,7 +11,7 @@
             background-color: #1c1c1e; 
             color: #e0e0e0; 
             margin: 0;
-            padding: 15px;
+            padding: 0px;
             text-align: center;
             width: 200px;
             border-radius: 15px;
@@ -28,9 +28,11 @@
             background-color: #2c2c2e;
             border: 1px solid #444;
             border-radius: 10px;
-            padding: 12px;
+            padding: 8px;
+            margin: 16px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             margin-bottom: 15px;
+            margin-top: 0px;
         }
 
         .status p {
@@ -45,13 +47,37 @@
 
         .status .highlight {
             font-size: 20px;
-            color: #ff7043;
+            color: #FB2E41;
+        }
+
+        #manual-canvas-stay-alive-btn {
+            background-color: #FB2E41; 
+            color: #fff; 
+            border: none; 
+            border-radius: 10px; 
+            padding: 8px 12px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        #manual-canvas-stay-alive-btn:hover {
+            background-color: #FB2E41;
+        }
+
+        #manual-canvas-stay-alive-btn:focus {
+            outline: none; 
         }
 
         .footer {
             font-size: 11px;
             color: #888;
             margin-top: 15px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
         }
 
         html, body {
@@ -61,15 +87,16 @@
 </head>
 <body>
 
-    <h1>Canvas, Stay Alive!</h1>
+    <img src="logo.png" class="logo" alt="">
     
     <div class="status">
         <p>Status: <span id="extensionStatus">Loading...</span></p>
-        <p>Canvas tabs detected: <span id="canvasTabCounter" class="highlight">0</span></p>
+        <p>Canvas tabs: <span id="canvasTabCounter" class="highlight">0</span></p>
+        <button id="manual-canvas-stay-alive-btn">Stay Alive</button>
     </div>
     
     <div class="footer">
-        <p>Updates every 5 minutes</p>
+        <p>Automatically keeps alive every 5 minutes</p>
     </div>
 
     <script src="popup.js"></script>
