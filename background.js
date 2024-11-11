@@ -1,5 +1,4 @@
 const CHECK_INTERVAL = 5; 
-const TARGET_URL = 'https://ue.instructure.com';
 let canvasTabCounter = 0;
 let extensionStatus = "Offline";
 let activeTabId;
